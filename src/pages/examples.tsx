@@ -15,6 +15,7 @@ export default function ExamplesPage() {
       <h1>Examples</h1>
 
       <button
+        disabled={getDataFetch.isLoading}
         onClick={() => {
           getDataFetch.run({
             body: JSON.stringify({
