@@ -3,5 +3,13 @@
     {
       "plan": "heroku-postgresql:hobby-dev"
     }
+  ],
+  "buildpacks": [
+    {
+      "url": "jontewks/puppeteer"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
   ]
 }
