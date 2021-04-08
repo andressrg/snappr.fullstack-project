@@ -20,11 +20,11 @@ export default (async (req, res) => {
     await page.goto(`https://www.snappr.com/enterprise-blog${postPath}`);
 
     const element = await page.waitForSelector('.page-title');
-    const value: string | null = await element?.evaluate(
+    const pageTitle: string | null = await element?.evaluate(
       (el) => el.textContent
     );
 
-    res.json({ title: value });
+    res.json({ title: pageTitle });
   } finally {
     await browser.close();
   }
